@@ -87,26 +87,28 @@ const App = ()=>{
     return _article;
   }
   return(
-    <div className="App">  
-        <Myheader
-          title={subject.title}
-          desc={subject.desc}  
-          onChangePage={()=>{
-            setMode('welcome');
-          }}
-          >      
-        </Myheader> 
-        <Mynav data={menus} onChangePage={(id)=>{
-          setMode('read');
-          setSelectedId(id);
-        }}></Mynav> 
-        {getArticles()}       
-        <div className='menu'>
-          <button type="button" className="primary" onClick={()=>{     
-            setMode('create');
-          }}>Create task</button>       
-        </div>
-    </div>
+
+      <div className="App">  
+          <Myheader
+            title={subject.title}
+            desc={subject.desc}  
+            onChangePage={()=>{
+              setMode('welcome');
+            }}
+            >      
+          </Myheader> 
+          <Mynav data={menus} onChangePage={(id)=>{
+            setMode('read');
+            setSelectedId(id);
+          }}></Mynav> 
+          {getArticles()}       
+          <div className='menu'>
+            <button type="button" className="primary" onClick={()=>{     
+              setMode('create');
+            }}>Create task</button>       
+          </div>
+      </div>
+
   )
 }
 export default App;
